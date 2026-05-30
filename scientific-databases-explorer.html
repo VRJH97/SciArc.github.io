@@ -10,8 +10,8 @@
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
 body {
-  background: #EAE0C8;
-  color: #111184;
+  background: #F5F3EF;
+  color: #2C2C2C;
   font-family: 'EB Garamond', Georgia, serif;
   min-height: 100vh;
   position: relative;
@@ -21,8 +21,8 @@ body::before {
   content: '';
   position: fixed; inset: 0; z-index: 0;
   background-image:
-    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+    linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px);
   background-size: 40px 40px;
   pointer-events: none;
 }
@@ -32,11 +32,11 @@ body::before {
 }
 .orb1 {
   width: 500px; height: 500px; top: -200px; right: -200px;
-  background: radial-gradient(circle, rgba(79,195,247,0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(79,195,247,0.03) 0%, transparent 70%);
 }
 .orb2 {
   width: 400px; height: 400px; bottom: -100px; left: -100px;
-  background: radial-gradient(circle, rgba(102,187,106,0.05) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(102,187,106,0.02) 0%, transparent 70%);
 }
 
 .wrap {
@@ -49,12 +49,12 @@ body::before {
   display: inline-flex; align-items: center; gap: 8px;
   font-family: 'JetBrains Mono', monospace; font-size: 10px;
   letter-spacing: 0.12em; text-transform: uppercase;
-  color: #4a5568; text-decoration: none;
+  color: #666; text-decoration: none;
   margin: 24px 0; padding: 6px 14px;
-  border: 1px solid rgba(255,255,255,0.07); border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.1); border-radius: 6px;
   transition: all 0.2s;
 }
-.back-link:hover { color: #7eb8d4; border-color: rgba(126,184,212,0.3); }
+.back-link:hover { color: #333; border-color: rgba(0,0,0,0.2); }
 
 /* ── HEADER ── */
 .header { text-align: center; padding: 32px 0 32px; }
@@ -62,22 +62,22 @@ body::before {
 .eyebrow {
   display: inline-block;
   font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase;
-  color: #4fc3f7; margin-bottom: 16px;
-  background: rgba(79,195,247,0.08); padding: 4px 16px; border-radius: 20px;
-  border: 1px solid rgba(79,195,247,0.2);
+  color: #0066CC; margin-bottom: 16px;
+  background: rgba(0,102,204,0.08); padding: 4px 16px; border-radius: 20px;
+  border: 1px solid rgba(0,102,204,0.2);
   font-family: 'JetBrains Mono', monospace;
 }
 
 h1 {
   font-size: clamp(28px, 5vw, 50px); font-weight: 400;
   letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 12px;
-  background: linear-gradient(135deg, #e8eaf0 0%, #90caf9 50%, #a5d6a7 100%);
+  background: linear-gradient(135deg, #1A1A1A 0%, #0066CC 50%, #2D7D3C 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .header-sub {
-  color: #8899aa; font-size: 16px; max-width: 540px;
+  color: #666; font-size: 16px; max-width: 540px;
   margin: 0 auto 32px; line-height: 1.6; font-style: italic;
 }
 
@@ -86,20 +86,20 @@ h1 {
 
 .stat {
   text-align: center;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.07);
+  background: rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.08);
   border-radius: 12px; padding: 10px 20px;
 }
-.stat-value { font-size: 24px; font-weight: 700; color: #4fc3f7; line-height: 1; }
+.stat-value { font-size: 24px; font-weight: 700; color: #0066CC; line-height: 1; }
 .stat-label {
-  font-size: 11px; color: #667788; margin-top: 2px;
+  font-size: 11px; color: #777; margin-top: 2px;
   font-family: 'JetBrains Mono', monospace; letter-spacing: 0.05em;
 }
 
 /* ── CONTROLS ── */
 .controls {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.08);
   border-radius: 16px; padding: 20px 24px; margin-bottom: 28px;
 }
 
@@ -110,59 +110,63 @@ h1 {
 .search-wrap { flex: 1 1 240px; position: relative; }
 .search-icon {
   position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
-  font-size: 14px; color: #667788; pointer-events: none;
+  font-size: 14px; color: #999; pointer-events: none;
 }
 
 input[type="text"] {
   width: 100%;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.1);
   border-radius: 10px; padding: 10px 12px 10px 34px;
-  color: #e8eaf0; font-size: 14px; outline: none;
+  color: #2C2C2C; font-size: 14px; outline: none;
   font-family: 'JetBrains Mono', monospace;
+}
+
+input[type="text"]::placeholder {
+  color: #999;
 }
 
 select {
   flex: 1 1 180px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.1);
   border-radius: 10px; padding: 10px 12px;
-  color: #e8eaf0; font-size: 13px; outline: none; cursor: pointer;
+  color: #2C2C2C; font-size: 13px; outline: none; cursor: pointer;
   font-family: 'JetBrains Mono', monospace;
 }
 
 .view-toggle {
   display: flex; gap: 4px;
-  background: rgba(255,255,255,0.05); border-radius: 8px; padding: 3px;
+  background: rgba(0,0,0,0.04); border-radius: 8px; padding: 3px;
   flex-shrink: 0;
 }
 
 .view-btn {
   background: none; border: 1px solid transparent;
   border-radius: 6px; padding: 6px 12px;
-  color: #667788; font-size: 12px; cursor: pointer;
+  color: #777; font-size: 12px; cursor: pointer;
   font-family: 'JetBrains Mono', monospace; letter-spacing: 0.05em;
   transition: all 0.15s;
 }
 .view-btn.active {
-  background: rgba(79,195,247,0.2);
-  border-color: rgba(79,195,247,0.4);
-  color: #4fc3f7;
+  background: rgba(0,102,204,0.15);
+  border-color: rgba(0,102,204,0.3);
+  color: #0066CC;
 }
 
 /* ── FIELD PILLS ── */
 .pills { display: flex; gap: 6px; flex-wrap: wrap; }
 
 .pill {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.07);
+  background: rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.08);
   border-radius: 20px; padding: 4px 10px;
-  color: #667788; font-size: 11px; cursor: pointer;
+  color: #777; font-size: 11px; cursor: pointer;
   font-family: 'JetBrains Mono', monospace; letter-spacing: 0.03em;
   display: inline-flex; align-items: center; gap: 5px;
   transition: all 0.15s;
 }
-.pill:hover { color: #aabbcc; border-color: rgba(255,255,255,0.15); }
+.pill:hover { color: #444; border-color: rgba(0,0,0,0.15); }
 
 .pill-dot {
   width: 6px; height: 6px; border-radius: 50%;
@@ -185,9 +189,9 @@ select {
 }
 
 .field-count {
-  font-size: 11px; color: #445566;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.07);
+  font-size: 11px; color: #888;
+  background: rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.08);
   border-radius: 10px; padding: 2px 8px;
   font-family: 'JetBrains Mono', monospace;
 }
@@ -208,15 +212,15 @@ select {
   border-radius: 14px; padding: 18px;
   cursor: pointer;
   transition: all 0.2s ease;
-  border: 1px solid rgba(255,255,255,0.07);
-  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.5);
   position: relative;
 }
 .db-card:hover {
-  background: rgba(255,255,255,0.05);
-  border-color: rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.8);
+  border-color: rgba(0,0,0,0.12);
 }
-.db-card.selected { border-color: rgba(126,184,212,0.45); background: rgba(126,184,212,0.05); }
+.db-card.selected { border-color: rgba(0,102,204,0.35); background: rgba(0,102,204,0.05); }
 
 .db-list .db-card {
   display: flex; align-items: flex-start; gap: 20px;
@@ -233,10 +237,10 @@ select {
 }
 
 .card-name {
-  font-size: 14px; font-weight: 600; color: #e8eaf0; line-height: 1.3;
+  font-size: 14px; font-weight: 600; color: #1A1A1A; line-height: 1.3;
 }
 .card-subfield {
-  font-size: 11px; color: #556677;
+  font-size: 11px; color: #777;
   font-family: 'JetBrains Mono', monospace; margin-top: 3px; letter-spacing: 0.03em;
 }
 
@@ -246,21 +250,21 @@ select {
   font-family: 'JetBrains Mono', monospace; letter-spacing: 0.05em;
   border: 1px solid; flex-shrink: 0; white-space: nowrap;
 }
-.badge-free     { background: #1b4332; color: #52b788; border-color: rgba(82,183,136,0.35); }
-.badge-freemium { background: #1c2951; color: #74b9ff; border-color: rgba(116,185,255,0.3); }
-.badge-paid     { background: #3d1515; color: #ff7675; border-color: rgba(255,118,117,0.3); }
-.badge-inst     { background: #2d2316; color: #fdcb6e; border-color: rgba(253,203,110,0.3); }
+.badge-free     { background: #E8F5E9; color: #2E7D32; border-color: rgba(46,125,50,0.35); }
+.badge-freemium { background: #E3F2FD; color: #1565C0; border-color: rgba(21,101,192,0.3); }
+.badge-paid     { background: #FFEBEE; color: #C62828; border-color: rgba(198,40,40,0.3); }
+.badge-inst     { background: #FFF3E0; color: #E65100; border-color: rgba(230,81,0,0.3); }
 
 /* Expanded detail */
 .card-detail { display: none; margin-top: 12px; }
 .db-card.selected .card-detail { display: block; }
 
 .card-desc {
-  font-size: 13px; color: #8899aa; line-height: 1.65;
+  font-size: 13px; color: #555; line-height: 1.65;
   font-style: italic; margin-bottom: 10px;
 }
 .card-org {
-  font-size: 11px; color: #556677; margin-bottom: 10px;
+  font-size: 11px; color: #777; margin-bottom: 10px;
   font-family: 'JetBrains Mono', monospace;
 }
 .card-link {
@@ -269,32 +273,32 @@ select {
   border: 1px solid; border-radius: 6px; padding: 4px 10px;
   font-family: 'JetBrains Mono', monospace; transition: filter 0.15s;
 }
-.card-link:hover { filter: brightness(1.25); }
+.card-link:hover { filter: brightness(0.9); }
 
 /* Tags */
 .card-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
 .tag {
   font-size: 10px; padding: 2px 7px; border-radius: 6px;
-  background: rgba(255,255,255,0.04); color: #5a6a7a;
-  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(0,0,0,0.04); color: #666;
+  border: 1px solid rgba(0,0,0,0.08);
   font-family: 'JetBrains Mono', monospace;
 }
 
 .expand-hint {
-  margin-top: 8px; font-size: 11px; color: #3a4a5a; font-style: italic;
+  margin-top: 8px; font-size: 11px; color: #999; font-style: italic;
 }
 
 /* Empty */
 .empty {
   text-align: center; padding: 80px 0;
-  color: #4a5a6a; font-size: 16px; font-style: italic;
+  color: #999; font-size: 16px; font-style: italic;
 }
 
 /* Footer */
 .page-footer {
   text-align: center; margin-top: 60px;
-  border-top: 1px solid rgba(255,255,255,0.06); padding-top: 24px;
-  color: #3a4a5a; font-size: 11px;
+  border-top: 1px solid rgba(0,0,0,0.08); padding-top: 24px;
+  color: #999; font-size: 11px;
   font-family: 'JetBrains Mono', monospace; letter-spacing: 0.08em;
 }
 
@@ -360,110 +364,110 @@ select {
 </div>
 
 <script>
-// ─── DATA ─────────────────────────────────────────────────────────────────────
+// ─── DATA ────────────────────────────────────────────────────────────[...]
 const databases = [
   // GENOMICS & GENETICS
-  {id:1,name:"GenBank / NCBI",field:"Genomics & Genetics",subfield:"Sequence Repository",access:"Free",url:"https://www.ncbi.nlm.nih.gov/genbank/",description:"The US NCBI flagship nucleotide sequence repository. Covers genomic assemblies, gene expression, and variation data. Includes sub-databases: dbSNP, ClinVar, dbVar, GEO.",tags:["DNA","RNA","Sequences","SNPs","Expression"],org:"NCBI / NIH"},
-  {id:2,name:"Ensembl",field:"Genomics & Genetics",subfield:"Genome Annotation",access:"Free",url:"https://www.ensembl.org",description:"Automatic annotation databases for human, mouse, other vertebrates, and eukaryote genomes. Maintained by EMBL-EBI.",tags:["Annotation","Vertebrates","Genome"],org:"EMBL-EBI"},
-  {id:3,name:"TCGA",field:"Genomics & Genetics",subfield:"Cancer Genomics",access:"Free",url:"https://www.cancer.gov/tcga",description:"The Cancer Genome Atlas. Gene expression, copy number variation, SNP genotyping, DNA methylation, microRNA profiling, and exon sequencing from hundreds of cancer samples.",tags:["Cancer","Methylation","CNV","miRNA"],org:"NCI / NIH"},
-  {id:4,name:"GWAS Catalog",field:"Genomics & Genetics",subfield:"Association Studies",access:"Free",url:"https://www.ebi.ac.uk/gwas/",description:"Captures data from over 7,000 papers on genome-wide association studies. Run by EMBL-EBI and NHGRI.",tags:["GWAS","SNPs","Disease","Variants"],org:"EMBL-EBI / NHGRI"},
-  {id:5,name:"1000 Genomes Project",field:"Genomics & Genetics",subfield:"Population Genomics",access:"Free",url:"https://www.internationalgenome.org/",description:"Genomes of more than a thousand anonymous participants from different ethnic groups, analysed and publicly available.",tags:["Population","Ethnic diversity","Variants"],org:"International Consortium"},
-  {id:6,name:"DDBJ",field:"Genomics & Genetics",subfield:"Sequence Archive",access:"Free",url:"https://www.ddbj.nig.ac.jp/",description:"DNA Data Bank of Japan. Part of the INSDC alongside GenBank and ENA. Maintains sequence archives, BioProject, BioSample, and Genomic Expression Archive.",tags:["Sequences","Archive","Japan"],org:"NIG Japan"},
+  {id:1,name:"GenBank / NCBI",field:"Genomics & Genetics",subfield:"Sequence Repository",access:"Free",url:"https://www.ncbi.nlm.nih.gov/genbank/",description:"The US NCBI flagship nucleotide sequence database of GenBank.",tags:["DNA","Sequences","Genomics"]},
+  {id:2,name:"Ensembl",field:"Genomics & Genetics",subfield:"Genome Annotation",access:"Free",url:"https://www.ensembl.org",description:"Automatic annotation databases for human, mouse, other vertebrates, and selected eukaryotes.",tags:["Genome","Annotation","Variation"]},
+  {id:3,name:"TCGA",field:"Genomics & Genetics",subfield:"Cancer Genomics",access:"Free",url:"https://www.cancer.gov/tcga",description:"The Cancer Genome Atlas. Gene expression, copy number variation, and mutation data for cancer.",tags:["Cancer","Gene Expression","Mutations"]},
+  {id:4,name:"GWAS Catalog",field:"Genomics & Genetics",subfield:"Association Studies",access:"Free",url:"https://www.ebi.ac.uk/gwas/",description:"Captures data from over 7,000 papers on genome-wide association studies.",tags:["GWAS","SNPs","Associations"]},
+  {id:5,name:"1000 Genomes Project",field:"Genomics & Genetics",subfield:"Population Genomics",access:"Free",url:"https://www.internationalgenome.org/",description:"Genomes of more than a thousand anonymous participants from diverse populations.",tags:["Population","Variation","Reference"]},
+  {id:6,name:"DDBJ",field:"Genomics & Genetics",subfield:"Sequence Archive",access:"Free",url:"https://www.ddbj.nig.ac.jp/",description:"DNA Data Bank of Japan. Part of the INSDC alongside GenBank and ENA.",tags:["Sequences","Archive","International"]},
   // PROTEOMICS
-  {id:7,name:"UniProt / UniProtKB",field:"Proteomics",subfield:"Protein Annotation",access:"Free",url:"https://www.uniprot.org/",description:"Gold standard for protein sequence and functional annotation. Manually curated (Swiss-Prot) and computationally annotated (TrEMBL) entries.",tags:["Proteins","Sequences","Function"],org:"EMBL-EBI / SIB / PIR"},
-  {id:8,name:"Protein Data Bank (PDB)",field:"Proteomics",subfield:"3D Structures",access:"Free",url:"https://www.rcsb.org/",description:"Worldwide repository for 3D structures of biological macromolecules via X-ray crystallography, cryo-EM, and NMR.",tags:["3D Structure","Crystallography","cryo-EM"],org:"RCSB"},
-  {id:9,name:"AlphaFold Database",field:"Proteomics",subfield:"Predicted Structures",access:"Free",url:"https://alphafold.ebi.ac.uk/",description:"AI-predicted 3D protein structures from amino acid sequences, covering hundreds of millions of proteins across essentially all known organisms.",tags:["AI","Structure Prediction","DeepMind"],org:"DeepMind / EMBL-EBI"},
-  {id:10,name:"STRING",field:"Proteomics",subfield:"Protein Interactions",access:"Free",url:"https://string-db.org/",description:"Functional, physical, and regulatory protein interaction networks. Upgraded facilities for gene set enrichment analysis.",tags:["PPI","Networks","Interactions"],org:"SIB / EMBL-EBI"},
-  {id:11,name:"InterPro / Pfam",field:"Proteomics",subfield:"Protein Families",access:"Free",url:"https://www.ebi.ac.uk/interpro/",description:"Protein family classification and domain databases. Essential for identifying conserved functional domains.",tags:["Domains","Families","Motifs"],org:"EMBL-EBI"},
-  {id:12,name:"PhosphoSitePlus",field:"Proteomics",subfield:"Post-translational Modifications",access:"Free (basic) / Paid",url:"https://www.phosphosite.org/",description:"Curated database of PTMs including phosphorylation, ubiquitination, acetylation, and methylation across human and model organism proteins.",tags:["PTM","Phosphorylation","Ubiquitination"],org:"Cell Signaling Technology"},
+  {id:7,name:"UniProt / UniProtKB",field:"Proteomics",subfield:"Protein Annotation",access:"Free",url:"https://www.uniprot.org/",description:"Gold standard for protein sequence and functional annotation curated by experts.",tags:["Proteins","Annotation","Sequences"]},
+  {id:8,name:"Protein Data Bank (PDB)",field:"Proteomics",subfield:"3D Structures",access:"Free",url:"https://www.rcsb.org/",description:"Worldwide repository for 3D structures of biological macromolecules.",tags:["Structures","X-ray","NMR"]},
+  {id:9,name:"AlphaFold Database",field:"Proteomics",subfield:"Predicted Structures",access:"Free",url:"https://alphafold.ebi.ac.uk/",description:"AI-predicted 3D protein structures from amino acid sequences covering billions of organisms.",tags:["Structures","Prediction","AI"]},
+  {id:10,name:"STRING",field:"Proteomics",subfield:"Protein Interactions",access:"Free",url:"https://string-db.org/",description:"Functional, physical, and regulatory protein interaction networks. Updated regularly.",tags:["Interactions","Networks","Functional"]},
+  {id:11,name:"InterPro / Pfam",field:"Proteomics",subfield:"Protein Families",access:"Free",url:"https://www.ebi.ac.uk/interpro/",description:"Protein family classification and domain databases. Essential for sequence analysis.",tags:["Families","Domains","Classification"]},
+  {id:12,name:"PhosphoSitePlus",field:"Proteomics",subfield:"Post-translational Modifications",access:"Free (basic) / Paid",url:"https://www.phosphosite.org/",description:"Curated database of post-translational modifications (PTMs) in proteins.",tags:["PTM","Phosphorylation","Modifications"]},
   // CHEMISTRY
-  {id:13,name:"PubChem",field:"Chemistry",subfield:"Chemical Compounds",access:"Free",url:"https://pubchem.ncbi.nlm.nih.gov/",description:"Draws on over 1,000 data sources and contains over 100 million compounds. Covers chemical structures, bioactivities, assays, and safety data.",tags:["Compounds","Bioactivity","Safety"],org:"NCBI / NIH"},
-  {id:14,name:"ChemSpider",field:"Chemistry",subfield:"Chemical Database",access:"Free",url:"https://www.chemspider.com/",description:"Large chemical structure database with links to suppliers, literature, and spectral data. Over 100 million structures.",tags:["Structures","Spectral","Suppliers"],org:"Royal Society of Chemistry"},
-  {id:15,name:"Reaxys",field:"Chemistry",subfield:"Reactions & Synthesis",access:"Paid",url:"https://www.reaxys.com/",description:"Covers organic chemistry, organometallic and inorganic chemistry, and chemistry from patents. Merges Beilstein, Gmelin, and patent chemistry databases.",tags:["Reactions","Synthesis","Patents"],org:"Elsevier"},
-  {id:16,name:"SciFinder-n",field:"Chemistry",subfield:"Chemical Literature",access:"Institutional",url:"https://scifinder-n.cas.org/",description:"Core chemistry research and discovery tool for finding chemical substances, reactions, journal articles, and patent records.",tags:["Literature","Patents","Substances"],org:"CAS (ACS)"},
-  {id:17,name:"ChEMBL",field:"Chemistry",subfield:"Bioactivity",access:"Free",url:"https://www.ebi.ac.uk/chembl/",description:"Large-scale bioactivity database of drug-like molecules with binding, functional, and ADMET data from medicinal chemistry literature.",tags:["Drug-like","Bioactivity","ADMET"],org:"EMBL-EBI"},
-  {id:18,name:"KEGG",field:"Chemistry",subfield:"Pathways & Metabolism",access:"Free (basic) / Paid",url:"https://www.kegg.jp/",description:"Kyoto Encyclopedia of Genes and Genomes. Covers metabolic pathways, drugs, diseases, and viruses. Improved taxonomic mapping.",tags:["Pathways","Metabolism","Drugs"],org:"Kyoto University"},
+  {id:13,name:"PubChem",field:"Chemistry",subfield:"Chemical Compounds",access:"Free",url:"https://pubchem.ncbi.nlm.nih.gov/",description:"Draws on over 1,000 data sources and contains over 100 million chemical structures.",tags:["Chemicals","Compounds","Database"]},
+  {id:14,name:"ChemSpider",field:"Chemistry",subfield:"Chemical Database",access:"Free",url:"https://www.chemspider.com/",description:"Large chemical structure database with links to suppliers, literature, and properties.",tags:["Chemicals","Structures","Suppliers"]},
+  {id:15,name:"Reaxys",field:"Chemistry",subfield:"Reactions & Synthesis",access:"Paid",url:"https://www.reaxys.com/",description:"Covers organic chemistry, organometallic and inorganic chemistry, and reactions.",tags:["Reactions","Synthesis","Literature"]},
+  {id:16,name:"SciFinder-n",field:"Chemistry",subfield:"Chemical Literature",access:"Institutional",url:"https://scifinder-n.cas.org/",description:"Core chemistry research and discovery tool for finding chemical and research information.",tags:["Literature","Chemical","Discovery"]},
+  {id:17,name:"ChEMBL",field:"Chemistry",subfield:"Bioactivity",access:"Free",url:"https://www.ebi.ac.uk/chembl/",description:"Large-scale bioactivity database of drug-like molecules with binding and functional data.",tags:["Bioactivity","Drugs","Binding"]},
+  {id:18,name:"KEGG",field:"Chemistry",subfield:"Pathways & Metabolism",access:"Free (basic) / Paid",url:"https://www.kegg.jp/",description:"Kyoto Encyclopedia of Genes and Genomes. Covers metabolic pathways and reactions.",tags:["Pathways","Metabolism","Genes"]},
   // BOTANY & PLANT BIOLOGY
-  {id:19,name:"Plants of the World Online (POWO)",field:"Botany & Plant Biology",subfield:"Taxonomy & Flora",access:"Free",url:"https://powo.science.kew.org/",description:"International collaborative programme making digitised data on the world's flora available. Delivers taxonomy, identification, images, distribution, traits, threat status, and molecular phylogenies for vascular plants worldwide.",tags:["Taxonomy","Flora","Distribution","Traits"],org:"Royal Botanic Gardens Kew"},
-  {id:20,name:"Tropicos",field:"Botany & Plant Biology",subfield:"Nomenclature & Specimens",access:"Free",url:"https://www.tropicos.org/",description:"Links over 1.33 million scientific names with over 4.87 million specimens and 685,000+ digital images, including over 150,000 references from 52,000+ publications.",tags:["Specimens","Nomenclature","Images"],org:"Missouri Botanical Garden"},
-  {id:21,name:"TAIR",field:"Botany & Plant Biology",subfield:"Model Plant Genomics",access:"Free",url:"https://www.arabidopsis.org/",description:"The Arabidopsis Information Resource. Maintains genetic and molecular biology data for Arabidopsis thaliana: complete genome, gene structure, expression, DNA stocks, genome maps.",tags:["Arabidopsis","Genome","Expression"],org:"Stanford University"},
-  {id:22,name:"Phytozome",field:"Botany & Plant Biology",subfield:"Comparative Genomics",access:"Free",url:"https://phytozome-next.jgi.doe.gov/",description:"Plant comparative genomics portal providing access to over 65 sequenced and annotated green plant genomes.",tags:["Comparative","Genomes","Angiosperms"],org:"DOE Joint Genome Institute"},
-  {id:23,name:"JSTOR Global Plants",field:"Botany & Plant Biology",subfield:"Herbarium Specimens",access:"Free",url:"https://plants.jstor.org/",description:"The world's largest database of digitised plant specimens. Partner herbaria from dozens of countries contribute type specimens for taxonomic verification.",tags:["Specimens","Herbarium","Types"],org:"JSTOR"},
-  {id:24,name:"Biodiversity Heritage Library (BHL)",field:"Botany & Plant Biology",subfield:"Historical Literature",access:"Free",url:"https://www.biodiversitylibrary.org/",description:"Consortium of natural history and botanical libraries. Digitised millions of pages of taxonomic literature, oldest titles dating back to the 16th century.",tags:["Historical","Literature","Taxonomy"],org:"BHL Consortium"},
-  {id:25,name:"USDA PLANTS Database",field:"Botany & Plant Biology",subfield:"Native Plants (US)",access:"Free",url:"https://plants.usda.gov/",description:"Standardised information about vascular plants, mosses, liverworts, hornworts, and lichens of the US and territories. Searchable by state, county, and zip code.",tags:["Native Plants","Distribution","US"],org:"USDA NRCS"},
-  {id:26,name:"PlantCyc / PMN",field:"Botany & Plant Biology",subfield:"Plant Metabolomics",access:"Free",url:"https://www.plantcyc.org/",description:"Plant Metabolic Network databases containing curated information on genes, enzymes, compounds, reactions, and pathways in primary and secondary plant metabolism.",tags:["Metabolism","Pathways","Secondary metabolites"],org:"Carnegie Institution"},
-  {id:27,name:"IPNI",field:"Botany & Plant Biology",subfield:"Plant Names Index",access:"Free",url:"https://www.ipni.org/",description:"International Plant Names Index. Provides nomenclatural data for scientific names of vascular plants: spelling, author, types, and first place/date of publication.",tags:["Nomenclature","Names","Vascular plants"],org:"Kew / Harvard / ANBG"},
-  {id:28,name:"Botanicus",field:"Botany & Plant Biology",subfield:"Historic Literature",access:"Free",url:"https://www.botanicus.org/",description:"Freely accessible portal to historic botanical literature from the Missouri Botanical Garden Library. Botanical illustrations and original species descriptions.",tags:["Historic","Illustrations","Literature"],org:"Missouri Botanical Garden"},
-  {id:29,name:"GBIF",field:"Botany & Plant Biology",subfield:"Species Occurrence",access:"Free",url:"https://www.gbif.org/",description:"Global Biodiversity Information Facility. Occurrence records for species globally, aggregating museum, herbarium, and field observation data.",tags:["Occurrence","Biodiversity","Observations"],org:"GBIF"},
+  {id:19,name:"Plants of the World Online (POWO)",field:"Botany & Plant Biology",subfield:"Taxonomy & Flora",access:"Free",url:"https://powo.science.kew.org/",description:"International collaborative resource documenting vascular plant names and distributions.",tags:["Plants","Taxonomy","Distributions"]},
+  {id:20,name:"Tropicos",field:"Botany & Plant Biology",subfield:"Nomenclature & Specimens",access:"Free",url:"https://www.tropicos.org/",description:"Links over 1.33 million scientific names with over 4 million specimen records.",tags:["Plants","Specimens","Names"]},
+  {id:21,name:"TAIR",field:"Botany & Plant Biology",subfield:"Model Plant Genomics",access:"Free",url:"https://www.arabidopsis.org/",description:"The Arabidopsis Information Resource. Maintains genetic and molecular data for Arabidopsis.",tags:["Arabidopsis","Model Plant","Genomics"]},
+  {id:22,name:"Phytozome",field:"Botany & Plant Biology",subfield:"Comparative Genomics",access:"Free",url:"https://phytozome-next.jgi.doe.gov/",description:"Plant comparative genomics portal providing access to plant genomes and annotations.",tags:["Genomes","Comparative","Plants"]},
+  {id:23,name:"JSTOR Global Plants",field:"Botany & Plant Biology",subfield:"Herbarium Specimens",access:"Free",url:"https://plants.jstor.org/",description:"The world's largest database of digitised plant specimens with metadata.",tags:["Herbarium","Specimens","Images"]},
+  {id:24,name:"Biodiversity Heritage Library (BHL)",field:"Botany & Plant Biology",subfield:"Historical Literature",access:"Free",url:"https://www.biodiversitylibrary.org/",description:"Consortium of natural history libraries providing digitised biodiversity literature.",tags:["Literature","History","Biodiversity"]},
+  {id:25,name:"USDA PLANTS Database",field:"Botany & Plant Biology",subfield:"Native Plants (US)",access:"Free",url:"https://plants.usda.gov/",description:"Standardised information about vascular plants, mosses, liverworts, hornworts, and lichens.",tags:["Plants","USDA","Native"]},
+  {id:26,name:"PlantCyc / PMN",field:"Botany & Plant Biology",subfield:"Plant Metabolomics",access:"Free",url:"https://www.plantcyc.org/",description:"Plant Metabolic Network databases containing curated plant biochemical pathways.",tags:["Pathways","Metabolism","Plants"]},
+  {id:27,name:"IPNI",field:"Botany & Plant Biology",subfield:"Plant Names Index",access:"Free",url:"https://www.ipni.org/",description:"International Plant Names Index. Provides nomenclatural data for vascular plants.",tags:["Names","Index","Nomenclature"]},
+  {id:28,name:"Botanicus",field:"Botany & Plant Biology",subfield:"Historic Literature",access:"Free",url:"https://www.botanicus.org/",description:"Freely accessible portal to historic botanical literature and manuscripts.",tags:["Literature","History","Digital"]},
+  {id:29,name:"GBIF",field:"Botany & Plant Biology",subfield:"Species Occurrence",access:"Free",url:"https://www.gbif.org/",description:"Global Biodiversity Information Facility. Occurrence records for all organisms.",tags:["Biodiversity","Occurrences","Global"]},
   // NEUROSCIENCE
-  {id:30,name:"Allen Brain Atlas",field:"Neuroscience",subfield:"Brain Gene Expression",access:"Free",url:"https://portal.brain-map.org/",description:"Comprehensive gene expression data mapped to mouse and human brain. Includes cell type taxonomies, connectivity maps, and developmental transcriptomics.",tags:["Brain","Expression","Connectivity"],org:"Allen Institute"},
-  {id:31,name:"OpenNeuro",field:"Neuroscience",subfield:"Neuroimaging Data",access:"Free",url:"https://openneuro.org/",description:"Open repository for raw MRI, MEG, EEG, iEEG, and ECoG data from human neuroscience studies in BIDS format.",tags:["MRI","EEG","BIDS","Imaging"],org:"Stanford / OpenNeuro"},
-  {id:32,name:"NIF / Neuroscience Information Framework",field:"Neuroscience",subfield:"Aggregated Resources",access:"Free",url:"https://neuinfo.org/",description:"NIH-supported data repository searchable by type of data or NIH Institute/Center. Aggregates tools, data, and literature for neuroscience.",tags:["Aggregator","Tools","Literature"],org:"NIH / UCSD"},
+  {id:30,name:"Allen Brain Atlas",field:"Neuroscience",subfield:"Brain Gene Expression",access:"Free",url:"https://portal.brain-map.org/",description:"Comprehensive gene expression data mapped to mouse brain anatomy.",tags:["Brain","Gene Expression","Atlas"]},
+  {id:31,name:"OpenNeuro",field:"Neuroscience",subfield:"Neuroimaging Data",access:"Free",url:"https://openneuro.org/",description:"Open repository for raw MRI, MEG, EEG, iEEG, and ECoG data from human subjects.",tags:["Neuroimaging","fMRI","EEG"]},
+  {id:32,name:"NIF / Neuroscience Information Framework",field:"Neuroscience",subfield:"Aggregated Resources",access:"Free",url:"https://neuinfo.org/",description:"NIH-supported data repository search engine across neuroscience resources.",tags:["Neuroscience","Aggregated","Resources"]},
   // PHARMACOLOGY
-  {id:33,name:"DrugBank",field:"Pharmacology",subfield:"Drug Information",access:"Free (basic) / Paid",url:"https://go.drugbank.com/",description:"Used by over 1,500 research institutions and cited in over 58,000 publications. Provides comprehensive biomedical knowledge covering drug profiles, targets, interactions, and mechanisms.",tags:["Drugs","Targets","Interactions"],org:"DrugBank / University of Alberta"},
-  {id:34,name:"IUPHAR Guide to Pharmacology",field:"Pharmacology",subfield:"Drug Targets & Ligands",access:"Free",url:"https://www.guidetopharmacology.org/",description:"Curated, expert-reviewed database of drug targets, receptors, ion channels, transporters, and their ligands covering approved drugs and pharmacological standards.",tags:["Receptors","Ligands","Ion channels"],org:"IUPHAR / BPS"},
-  {id:35,name:"DrugMAP",field:"Pharmacology",subfield:"Drug Mechanisms",access:"Free",url:"https://drugmap.idrblab.net/",description:"Includes information on combinatorial drug treatments, repurposed drugs, and off-target drug effects.",tags:["Repurposing","Off-target","Combinations"],org:"IDRBLAB"},
+  {id:33,name:"DrugBank",field:"Pharmacology",subfield:"Drug Information",access:"Free (basic) / Paid",url:"https://go.drugbank.com/",description:"Used by over 1,500 research institutions and cited in over 30,000 publications.",tags:["Drugs","Pharmacology","Targets"]},
+  {id:34,name:"IUPHAR Guide to Pharmacology",field:"Pharmacology",subfield:"Drug Targets & Ligands",access:"Free",url:"https://www.guidetopharmacology.org/",description:"Curated, expert-reviewed database of drug targets and ligands.",tags:["Drugs","Targets","Ligands"]},
+  {id:35,name:"DrugMAP",field:"Pharmacology",subfield:"Drug Mechanisms",access:"Free",url:"https://drugmap.idrblab.net/",description:"Includes information on combinatorial drug treatments and repurposed drugs.",tags:["Drugs","Mechanisms","Combinations"]},
   // EPIGENOMICS
-  {id:36,name:"ENCODE",field:"Epigenomics",subfield:"Functional Genome Elements",access:"Free",url:"https://www.encodeproject.org/",description:"Encyclopedia of DNA Elements. Comprehensive resource for functional elements in the human genome including TF binding, histone modifications, chromatin accessibility, and DNA methylation.",tags:["Histone","Chromatin","ATAC-seq","Methylation"],org:"NHGRI / NIH"},
-  {id:37,name:"Roadmap Epigenomics",field:"Epigenomics",subfield:"Chromatin States",access:"Free",url:"https://egg2.wustl.edu/roadmap/web_portal/",description:"Maps of histone modifications and chromatin state across hundreds of human tissue and cell types. Essential for understanding gene regulation in disease contexts.",tags:["Histone","Tissues","Chromatin states"],org:"NIH Roadmap"},
+  {id:36,name:"ENCODE",field:"Epigenomics",subfield:"Functional Genome Elements",access:"Free",url:"https://www.encodeproject.org/",description:"Encyclopedia of DNA Elements. Comprehensive resource for functional genome annotation.",tags:["Epigenomics","Elements","Functional"]},
+  {id:37,name:"Roadmap Epigenomics",field:"Epigenomics",subfield:"Chromatin States",access:"Free",url:"https://egg2.wustl.edu/roadmap/web_portal/",description:"Maps of histone modifications and chromatin states for cell types and tissues.",tags:["Chromatin","Histones","States"]},
   // METABOLOMICS
-  {id:38,name:"HMDB",field:"Metabolomics",subfield:"Human Metabolites",access:"Free",url:"https://hmdb.ca/",description:"Human Metabolome Database. Over 220,000 metabolite entries with chemical, clinical, and biological data. Invaluable for NMR and mass spec data interpretation.",tags:["Metabolites","NMR","Mass spec"],org:"University of Alberta"},
-  {id:39,name:"MetaboLights",field:"Metabolomics",subfield:"Metabolomics Repository",access:"Free",url:"https://www.ebi.ac.uk/metabolights/",description:"Public metabolomics repository compatible with functional genomics and proteomics data. Metadata structured in standardised MAGE-TAB format, integrating with PRIDE at EBI.",tags:["Repository","Multi-omics","Standardised"],org:"EMBL-EBI"},
-  {id:40,name:"XCMS Online",field:"Metabolomics",subfield:"LC/MS Analysis",access:"Free",url:"https://xcmsonline.scripps.edu/",description:"Allows users to pull out pathways predicted to be dysregulated from LC/MS data. Creates Pathway Cloud Plots and can integrate proteomic and genomic data.",tags:["LC/MS","Pathway analysis","Dysregulation"],org:"Scripps Research"},
+  {id:38,name:"HMDB",field:"Metabolomics",subfield:"Human Metabolites",access:"Free",url:"https://hmdb.ca/",description:"Human Metabolome Database. Over 220,000 metabolite entries with chemical and clinical data.",tags:["Metabolites","Human","Database"]},
+  {id:39,name:"MetaboLights",field:"Metabolomics",subfield:"Metabolomics Repository",access:"Free",url:"https://www.ebi.ac.uk/metabolights/",description:"Public metabolomics repository compatible with international data standards.",tags:["Metabolomics","Repository","Standards"]},
+  {id:40,name:"XCMS Online",field:"Metabolomics",subfield:"LC/MS Analysis",access:"Free",url:"https://xcmsonline.scripps.edu/",description:"Allows users to pull out pathways predicted to be dysregulated in disease.",tags:["LC/MS","Analysis","Pathways"]},
   // TRANSCRIPTOMICS
-  {id:41,name:"GTEx",field:"Transcriptomics",subfield:"Tissue Gene Expression",access:"Free",url:"https://gtexportal.org/",description:"Genotype-Tissue Expression. Gene expression and eQTL data across 54 human tissues from nearly 1,000 donors. Gold standard for tissue-specific expression analysis.",tags:["eQTL","Tissues","Expression"],org:"NIH"},
-  {id:42,name:"Human Cell Atlas",field:"Transcriptomics",subfield:"Single-Cell Atlas",access:"Free",url:"https://www.humancellatlas.org/",description:"Reference maps of all human cells integrating scRNA-seq, spatial transcriptomics, and proteomics across all organs.",tags:["scRNA-seq","Cell types","Spatial"],org:"Global Consortium"},
-  {id:43,name:"CELLxGENE",field:"Transcriptomics",subfield:"Single-Cell Explorer",access:"Free",url:"https://cellxgene.cziscience.com/",description:"Interactive explorer for single-cell gene expression datasets. Over 50 million cells from published studies across organs and disease states.",tags:["scRNA-seq","Interactive","50M cells"],org:"Chan Zuckerberg Initiative"},
+  {id:41,name:"GTEx",field:"Transcriptomics",subfield:"Tissue Gene Expression",access:"Free",url:"https://gtexportal.org/",description:"Genotype-Tissue Expression. Gene expression and eQTL data across tissues.",tags:["Expression","eQTL","Tissues"]},
+  {id:42,name:"Human Cell Atlas",field:"Transcriptomics",subfield:"Single-Cell Atlas",access:"Free",url:"https://www.humancellatlas.org/",description:"Reference maps of all human cells integrating single-cell RNA-seq data.",tags:["Single-cell","scRNA-seq","Atlas"]},
+  {id:43,name:"CELLxGENE",field:"Transcriptomics",subfield:"Single-Cell Explorer",access:"Free",url:"https://cellxgene.cziscience.com/",description:"Interactive explorer for single-cell gene expression datasets.",tags:["Single-cell","Explorer","Interactive"]},
   // CANCER BIOLOGY
-  {id:44,name:"cBioPortal",field:"Cancer Biology",subfield:"Cancer Genomics",access:"Free",url:"https://www.cbioportal.org/",description:"Exploration of multidimensional cancer genomics datasets. Integrates TCGA and other studies with clinical annotation.",tags:["Mutations","CNV","Clinical","Survival"],org:"Memorial Sloan Kettering / Broad"},
-  {id:45,name:"COSMIC",field:"Cancer Biology",subfield:"Somatic Mutations",access:"Free (research) / Paid",url:"https://cancer.sanger.ac.uk/cosmic",description:"Catalogue of Somatic Mutations in Cancer. Most comprehensive somatic mutation database. Covers point mutations, CNVs, fusions, and gene expression changes.",tags:["Somatic mutations","Fusions","CNV"],org:"Wellcome Sanger Institute"},
-  {id:46,name:"OncoDB",field:"Cancer Biology",subfield:"Multi-omics Cancer",access:"Free",url:"https://oncodb.ca/",description:"Adds new database modalities such as proteomics and chromatin accessibility, with sophisticated tools to explore cross-omics relationships.",tags:["Proteomics","Chromatin","Cross-omics"],org:"OncoDB Consortium"},
+  {id:44,name:"cBioPortal",field:"Cancer Biology",subfield:"Cancer Genomics",access:"Free",url:"https://www.cbioportal.org/",description:"Exploration of multidimensional cancer genomics datasets. Interactive visualisation.",tags:["Cancer","Genomics","Portal"]},
+  {id:45,name:"COSMIC",field:"Cancer Biology",subfield:"Somatic Mutations",access:"Free (research) / Paid",url:"https://cancer.sanger.ac.uk/cosmic",description:"Catalogue of Somatic Mutations in Cancer. Expert-curated mutations.",tags:["Cancer","Mutations","Somatic"]},
+  {id:46,name:"OncoDB",field:"Cancer Biology",subfield:"Multi-omics Cancer",access:"Free",url:"https://oncodb.ca/",description:"Adds new database modalities such as proteomics and chromatin accessibility.",tags:["Cancer","Multi-omics","Proteomics"]},
   // MICROBIOLOGY & VIROLOGY
-  {id:47,name:"SILVA",field:"Microbiology & Virology",subfield:"Ribosomal RNA",access:"Free",url:"https://www.arb-silva.de/",description:"Ribosomal RNA sequence database for bacteria, archaea, and eukarya. Widely used in microbiome research for 16S/18S rRNA classification.",tags:["16S rRNA","Microbiome","Archaea"],org:"Max Planck / University of Bremen"},
-  {id:48,name:"PHI-base",field:"Microbiology & Virology",subfield:"Host-Pathogen Interactions",access:"Free",url:"http://www.phi-base.org/",description:"Links gene information to phenotypic information from microbial pathogens on their hosts, manually curated from peer-reviewed literature.",tags:["Pathogens","Host-pathogen","Phenotype"],org:"Rothamsted Research"},
+  {id:47,name:"SILVA",field:"Microbiology & Virology",subfield:"Ribosomal RNA",access:"Free",url:"https://www.arb-silva.de/",description:"Ribosomal RNA sequence database for bacteria, archaea, and eukaryotes.",tags:["rRNA","Sequences","Microbes"]},
+  {id:48,name:"PHI-base",field:"Microbiology & Virology",subfield:"Host-Pathogen Interactions",access:"Free",url:"http://www.phi-base.org/",description:"Links gene information to phenotypic information about pathogen interactions.",tags:["Pathogen","Interactions","Host"]},
   // CLINICAL & HEALTH
-  {id:49,name:"ClinicalTrials.gov",field:"Clinical & Health",subfield:"Clinical Trials",access:"Free",url:"https://clinicaltrials.gov/",description:"Registry and results database for publicly and privately funded clinical studies. Over 490,000 registered trials globally.",tags:["Trials","Interventions","Results"],org:"NIH / NLM"},
-  {id:50,name:"OMIM",field:"Clinical & Health",subfield:"Genetic Disorders",access:"Free",url:"https://www.omim.org/",description:"Online Mendelian Inheritance in Man. Comprehensive catalogue of human genes and genetic disorders with gene-disease relationships and literature references.",tags:["Genetic disorders","Mendelian","Disease genes"],org:"Johns Hopkins University"},
-  {id:51,name:"GeneCards",field:"Clinical & Health",subfield:"Human Gene Database",access:"Free (basic) / Paid",url:"https://www.genecards.org/",description:"Integrative human gene database aggregating data from over 150 sources including genomics, proteomics, transcriptomics, and clinical data.",tags:["Gene summaries","Disease","Multi-omics"],org:"Weizmann Institute"},
+  {id:49,name:"ClinicalTrials.gov",field:"Clinical & Health",subfield:"Clinical Trials",access:"Free",url:"https://clinicaltrials.gov/",description:"Registry and results database for publicly and privately supported clinical studies.",tags:["Trials","Clinical","Results"]},
+  {id:50,name:"OMIM",field:"Clinical & Health",subfield:"Genetic Disorders",access:"Free",url:"https://www.omim.org/",description:"Online Mendelian Inheritance in Man. Comprehensive catalogue of human genes and disorders.",tags:["Genetics","Disorders","Genes"]},
+  {id:51,name:"GeneCards",field:"Clinical & Health",subfield:"Human Gene Database",access:"Free (basic) / Paid",url:"https://www.genecards.org/",description:"Integrative human gene database aggregating data for disease, location, and function.",tags:["Genes","Diseases","Integration"]},
   // IMMUNOLOGY
-  {id:52,name:"ImmPort",field:"Immunology",subfield:"Immunology Data",access:"Free",url:"https://www.immport.org/",description:"NIH-funded repository for immunology research including clinical trials, flow cytometry, gene expression, and assay data from NIAID-funded studies.",tags:["Flow cytometry","Immune","Assays"],org:"NIH / NIAID"},
-  {id:53,name:"Reactome",field:"Immunology",subfield:"Pathways & Signalling",access:"Free",url:"https://reactome.org/",description:"Curated, peer-reviewed pathway database covering human biology. Covers signalling, metabolism, gene expression, and immune function with cross-references to model organisms.",tags:["Pathways","Signalling","Curated"],org:"Ontario Institute for Cancer Research"},
+  {id:52,name:"ImmPort",field:"Immunology",subfield:"Immunology Data",access:"Free",url:"https://www.immport.org/",description:"NIH-funded repository for immunology research including clinical trials and data.",tags:["Immunology","Data","NIH"]},
+  {id:53,name:"Reactome",field:"Immunology",subfield:"Pathways & Signalling",access:"Free",url:"https://reactome.org/",description:"Curated, peer-reviewed pathway database covering human biology and disease.",tags:["Pathways","Signalling","Reactions"]},
   // LITERATURE
-  {id:54,name:"PubMed / MEDLINE",field:"Literature & Multidisciplinary",subfield:"Biomedical Literature",access:"Free",url:"https://pubmed.ncbi.nlm.nih.gov/",description:"Over 35 million citations for biomedical literature from MEDLINE, life science journals, and online books. The primary literature database for life sciences.",tags:["Citations","Abstracts","Biomedical"],org:"NLM / NIH"},
-  {id:55,name:"Europe PMC",field:"Literature & Multidisciplinary",subfield:"Life Science Literature",access:"Free",url:"https://europepmc.org/",description:"Life sciences literature database including preprints, supplementary data, and grant information. European mirror of PubMed with enhanced features.",tags:["Preprints","Grants","Open access"],org:"EMBL-EBI"},
-  {id:56,name:"Scopus",field:"Literature & Multidisciplinary",subfield:"All Disciplines",access:"Institutional",url:"https://www.scopus.com/",description:"All disciplines; journal rankings, h-index, and citation tracking. One of the two largest academic citation databases.",tags:["Citations","h-index","Metrics"],org:"Elsevier"},
-  {id:57,name:"Web of Science",field:"Literature & Multidisciplinary",subfield:"All Disciplines",access:"Institutional",url:"https://www.webofscience.com/",description:"All disciplines; citation indexing across journals, books, and conference proceedings.",tags:["Citation","Impact factor","All fields"],org:"Clarivate"},
-  {id:58,name:"bioRxiv / medRxiv",field:"Literature & Multidisciplinary",subfield:"Preprints",access:"Free",url:"https://www.biorxiv.org/",description:"Life science preprints (not peer-reviewed). Essential for accessing cutting-edge unpublished research before formal publication.",tags:["Preprints","Unreviewed","Open access"],org:"Cold Spring Harbor Laboratory"},
+  {id:54,name:"PubMed / MEDLINE",field:"Literature & Multidisciplinary",subfield:"Biomedical Literature",access:"Free",url:"https://pubmed.ncbi.nlm.nih.gov/",description:"Over 35 million citations for biomedical literature with free full-text archive.",tags:["Literature","Citations","Biomedical"]},
+  {id:55,name:"Europe PMC",field:"Literature & Multidisciplinary",subfield:"Life Science Literature",access:"Free",url:"https://europepmc.org/",description:"Life sciences literature database including open access content.",tags:["Literature","Life Science","Open Access"]},
+  {id:56,name:"Scopus",field:"Literature & Multidisciplinary",subfield:"All Disciplines",access:"Institutional",url:"https://www.scopus.com/",description:"All disciplines; journal rankings, h-index, citation analysis.",tags:["Citations","Rankings","Multidisciplinary"]},
+  {id:57,name:"Web of Science",field:"Literature & Multidisciplinary",subfield:"All Disciplines",access:"Institutional",url:"https://www.webofscience.com/",description:"All disciplines; citation index and research metrics.",tags:["Citations","Index","Metrics"]},
+  {id:58,name:"bioRxiv / medRxiv",field:"Literature & Multidisciplinary",subfield:"Preprints",access:"Free",url:"https://www.biorxiv.org/",description:"Life science preprints (not peer-reviewed). Essential for cutting-edge research.",tags:["Preprints","Life Science","Open"]},
   // ECOLOGY & ENVIRONMENT
-  {id:59,name:"BOLD (Barcode of Life)",field:"Ecology & Environment",subfield:"Species Identification",access:"Free",url:"https://www.boldsystems.org/",description:"DNA barcode library for species identification, covering millions of specimens from animals, plants, and fungi.",tags:["DNA barcoding","Species ID","COI"],org:"University of Guelph"},
-  {id:60,name:"IUCN Red List",field:"Ecology & Environment",subfield:"Conservation Status",access:"Free",url:"https://www.iucnredlist.org/",description:"The world's most comprehensive information source on global extinction risk status of animal, fungus, and plant species.",tags:["Conservation","Extinction","Threat status"],org:"IUCN"},
+  {id:59,name:"BOLD (Barcode of Life)",field:"Ecology & Environment",subfield:"Species Identification",access:"Free",url:"https://www.boldsystems.org/",description:"DNA barcode library for species identification and discovery.",tags:["DNA Barcodes","Species","Identification"]},
+  {id:60,name:"IUCN Red List",field:"Ecology & Environment",subfield:"Conservation Status",access:"Free",url:"https://www.iucnredlist.org/",description:"The world's most comprehensive information source on species conservation status.",tags:["Conservation","Species","Status"]},
   // STRUCTURAL BIOLOGY
-  {id:61,name:"EMDB",field:"Structural Biology",subfield:"Cryo-EM Data",access:"Free",url:"https://www.ebi.ac.uk/emdb/",description:"Electron Microscopy Data Bank. Repository for cryo-EM density maps and associated metadata. Closely linked to PDB.",tags:["Cryo-EM","Density maps","Macromolecules"],org:"EMBL-EBI"},
-  {id:62,name:"BindingDB",field:"Structural Biology",subfield:"Binding Affinities",access:"Free",url:"https://www.bindingdb.org/",description:"Measured binding affinities between proteins and small drug-like molecules. Useful for structure-activity relationship studies.",tags:["Binding affinity","SAR","Drug design"],org:"University of Maryland"},
+  {id:61,name:"EMDB",field:"Structural Biology",subfield:"Cryo-EM Data",access:"Free",url:"https://www.ebi.ac.uk/emdb/",description:"Electron Microscopy Data Bank. Repository for cryo-EM density maps and structures.",tags:["Cryo-EM","Structures","Maps"]},
+  {id:62,name:"BindingDB",field:"Structural Biology",subfield:"Binding Affinities",access:"Free",url:"https://www.bindingdb.org/",description:"Measured binding affinities between proteins and small drugs.",tags:["Binding","Affinities","Proteins"]},
   // AGRICULTURE & FOOD SCIENCE
-  {id:63,name:"USDA FoodData Central",field:"Agriculture & Food Science",subfield:"Nutrient Composition",access:"Free",url:"https://fdc.nal.usda.gov/",description:"Comprehensive nutrient composition database covering branded and generic foods with detailed macro and micronutrient profiles.",tags:["Nutrients","Food composition","Branded foods"],org:"USDA"},
-  {id:64,name:"CAZy",field:"Agriculture & Food Science",subfield:"Carbohydrate Enzymes",access:"Free",url:"http://www.cazy.org/",description:"Carbohydrate-Active Enzymes Database. Critical for plant cell wall biology and microbiome research. Covers metabolism and signalling with updated enzyme family descriptions.",tags:["Cell wall","Enzymes","Carbohydrates"],org:"AFMB / CNRS"}
+  {id:63,name:"USDA FoodData Central",field:"Agriculture & Food Science",subfield:"Nutrient Composition",access:"Free",url:"https://fdc.nal.usda.gov/",description:"Comprehensive nutrient composition data for food.",tags:["Food","Nutrients","USDA"]},
+  {id:64,name:"CAZy",field:"Agriculture & Food Science",subfield:"Carbohydrate Enzymes",access:"Free",url:"http://www.cazy.org/",description:"Carbohydrate-Active Enzymes Database. Critical for plant carbohydrate biology.",tags:["Enzymes","Carbohydrates","Agriculture"]}
 ];
 
-// ─── FIELD COLOURS ────────────────────────────────────────────────────────────
+// ─── FIELD COLOURS ────────────────────────────────────────────────────────[...]
 const fieldColors = {
-  "Genomics & Genetics":        {accent:"#4fc3f7", dot:"#4fc3f7", rgb:"79,195,247"},
-  "Proteomics":                 {accent:"#ce93d8", dot:"#ce93d8", rgb:"206,147,216"},
-  "Chemistry":                  {accent:"#80cbc4", dot:"#80cbc4", rgb:"128,203,196"},
-  "Botany & Plant Biology":     {accent:"#a5d6a7", dot:"#66bb6a", rgb:"165,214,167"},
-  "Neuroscience":               {accent:"#ffcc80", dot:"#ffa726", rgb:"255,204,128"},
-  "Pharmacology":               {accent:"#f48fb1", dot:"#f06292", rgb:"244,143,177"},
-  "Epigenomics":                {accent:"#80deea", dot:"#26c6da", rgb:"128,222,234"},
-  "Metabolomics":               {accent:"#fff59d", dot:"#ffee58", rgb:"255,245,157"},
-  "Transcriptomics":            {accent:"#90caf9", dot:"#42a5f5", rgb:"144,202,249"},
-  "Cancer Biology":             {accent:"#ef9a9a", dot:"#ef5350", rgb:"239,154,154"},
-  "Microbiology & Virology":    {accent:"#b39ddb", dot:"#7e57c2", rgb:"179,157,219"},
-  "Clinical & Health":          {accent:"#a5d6a7", dot:"#4caf50", rgb:"165,214,167"},
-  "Immunology":                 {accent:"#ffab91", dot:"#ff7043", rgb:"255,171,145"},
-  "Literature & Multidisciplinary":{accent:"#e0e0e0", dot:"#9e9e9e", rgb:"224,224,224"},
-  "Ecology & Environment":      {accent:"#c5e1a5", dot:"#8bc34a", rgb:"197,225,165"},
-  "Structural Biology":         {accent:"#81d4fa", dot:"#29b6f6", rgb:"129,212,250"},
-  "Agriculture & Food Science": {accent:"#ffcc80", dot:"#ff9800", rgb:"255,204,128"}
+  "Genomics & Genetics":        {accent:"#0066CC", dot:"#0066CC", rgb:"0,102,204"},
+  "Proteomics":                 {accent:"#7B2CBF", dot:"#7B2CBF", rgb:"123,44,191"},
+  "Chemistry":                  {accent:"#00B4A6", dot:"#00B4A6", rgb:"0,180,166"},
+  "Botany & Plant Biology":     {accent:"#2D7D3C", dot:"#2D7D3C", rgb:"45,125,60"},
+  "Neuroscience":               {accent:"#D97706", dot:"#D97706", rgb:"217,119,6"},
+  "Pharmacology":               {accent:"#C2185B", dot:"#C2185B", rgb:"194,24,91"},
+  "Epigenomics":                {accent:"#0097A7", dot:"#0097A7", rgb:"0,151,167"},
+  "Metabolomics":               {accent:"#F57F17", dot:"#F57F17", rgb:"245,127,23"},
+  "Transcriptomics":            {accent:"#1565C0", dot:"#1565C0", rgb:"21,101,192"},
+  "Cancer Biology":             {accent:"#E53935", dot:"#E53935", rgb:"229,57,53"},
+  "Microbiology & Virology":    {accent:"#512DA8", dot:"#512DA8", rgb:"81,45,168"},
+  "Clinical & Health":          {accent:"#2E7D32", dot:"#2E7D32", rgb:"46,125,50"},
+  "Immunology":                 {accent:"#E64A19", dot:"#E64A19", rgb:"230,74,25"},
+  "Literature & Multidisciplinary":{accent:"#616161", dot:"#616161", rgb:"97,97,97"},
+  "Ecology & Environment":      {accent:"#689F38", dot:"#689F38", rgb:"104,159,56"},
+  "Structural Biology":         {accent:"#0288D1", dot:"#0288D1", rgb:"2,136,209"},
+  "Agriculture & Food Science": {accent:"#F57C00", dot:"#F57C00", rgb:"245,124,0"}
 };
 
 const accessBadge = {
@@ -474,14 +478,14 @@ const accessBadge = {
   "Institutional":         {cls:"badge-inst",    label:"Institutional"}
 };
 
-// ─── STATE ────────────────────────────────────────────────────────────────────
+// ─── STATE ──────────────────────────────────────────────────────────[...]
 let searchVal = '';
 let fieldFilter = '';
 let accessFilter = '';
 let viewMode = 'grid';
 let selectedId = null;
 
-// ─── INIT ─────────────────────────────────────────────────────────────────────
+// ─── INIT ────────────────────────────────────────────────────────────[...]
 const fields = [...new Set(databases.map(d => d.field))];
 const freeCount = databases.filter(d => d.access === 'Free').length;
 
@@ -504,19 +508,19 @@ function buildPills() {
   // All pill
   const allPill = document.createElement('button');
   allPill.className = 'pill' + (fieldFilter === '' ? ' active' : '');
-  allPill.innerHTML = `<span class="pill-dot" style="background:${fieldFilter===''?'#4fc3f7':'#445566'}"></span>All`;
+  allPill.innerHTML = `<span class="pill-dot" style="background:${fieldFilter===''?'#0066CC':'#999'}"></span>All`;
   allPill.onclick = () => { fieldFilter = ''; fieldSelect.value = ''; render(); buildPills(); };
   pillsWrap.appendChild(allPill);
 
   fields.forEach(f => {
-    const c = fieldColors[f] || {accent:'#aaa', dot:'#aaa', rgb:'170,170,170'};
+    const c = fieldColors[f] || {accent:'#666', dot:'#666', rgb:'102,102,102'};
     const active = fieldFilter === f;
     const p = document.createElement('button');
     p.className = 'pill' + (active ? ' active' : '');
     p.style.cssText = active
       ? `color:${c.accent};background:rgba(${c.rgb},0.12);border-color:rgba(${c.rgb},0.4)`
       : '';
-    p.innerHTML = `<span class="pill-dot" style="background:${active ? c.dot : '#445566'}"></span>${f.split(' & ')[0]}`;
+    p.innerHTML = `<span class="pill-dot" style="background:${active ? c.dot : '#999'}"></span>${f.split(' & ')[0]}`;
     p.onclick = () => {
       fieldFilter = active ? '' : f;
       fieldSelect.value = fieldFilter;
@@ -528,7 +532,7 @@ function buildPills() {
 }
 buildPills();
 
-// ─── EVENTS ───────────────────────────────────────────────────────────────────
+// ─── EVENTS ──────────────────────────────────────────────────────────[...]
 document.getElementById('search').addEventListener('input', e => {
   searchVal = e.target.value;
   selectedId = null;
@@ -562,7 +566,7 @@ document.getElementById('btn-list').addEventListener('click', () => {
   render();
 });
 
-// ─── FILTER ───────────────────────────────────────────────────────────────────
+// ─── FILTER ──────────────────────────────────────────────────────────[...]
 function getFiltered() {
   const s = searchVal.toLowerCase();
   return databases.filter(db => {
@@ -579,7 +583,7 @@ function getFiltered() {
   });
 }
 
-// ─── RENDER ───────────────────────────────────────────────────────────────────
+// ─── RENDER ──────────────────────────────────────────────────────────[...]
 function render() {
   const filtered = getFiltered();
   document.getElementById('stat-showing').textContent = filtered.length;
@@ -602,7 +606,7 @@ function render() {
   let html = '';
 
   Object.entries(groups).forEach(([field, dbs]) => {
-    const c = fieldColors[field] || {accent:'#aaa', dot:'#aaa', rgb:'170,170,170'};
+    const c = fieldColors[field] || {accent:'#666', dot:'#666', rgb:'102,102,102'};
 
     html += `<div class="field-group">`;
     html += `<div class="field-header">
@@ -618,7 +622,7 @@ function render() {
       const badge = accessBadge[db.access] || accessBadge['Free'];
       const isSelected = selectedId === db.id;
       const cardStyle = isSelected
-        ? `border-color:rgba(${c.rgb},0.45);background:rgba(${c.rgb},0.06)`
+        ? `border-color:rgba(${c.rgb},0.35);background:rgba(${c.rgb},0.06)`
         : '';
 
       let linkColor = c.accent;
@@ -639,7 +643,7 @@ function render() {
         <div class="card-right">
           <div class="card-detail" style="display:${isSelected ? 'block' : 'none'}">
             <p class="card-desc">${db.description}</p>
-            <div class="card-org">Org: ${db.org}</div>
+            <div class="card-org">Org: ${db.org || 'N/A'}</div>
             <a class="card-link" href="${db.url}" target="_blank" rel="noopener"
               style="color:${linkColor};border-color:rgba(${c.rgb},0.3);background:rgba(${c.rgb},0.07)"
               onclick="event.stopPropagation()">↗ Visit Database</a>
@@ -658,7 +662,7 @@ function render() {
         </div>
         <div class="card-detail">
           <p class="card-desc">${db.description}</p>
-          <div class="card-org">Org: ${db.org}</div>
+          <div class="card-org">Org: ${db.org || 'N/A'}</div>
           <a class="card-link" href="${db.url}" target="_blank" rel="noopener"
             style="color:${linkColor};border-color:rgba(${c.rgb},0.3);background:rgba(${c.rgb},0.07)"
             onclick="event.stopPropagation()">↗ Visit Database</a>
@@ -689,7 +693,7 @@ function render() {
     `${filtered.length} of ${databases.length} databases · ${fields.length} disciplines · last updated 2026`;
 }
 
-// ─── INITIAL RENDER ───────────────────────────────────────────────────────────
+// ─── INITIAL RENDER ──────────────────────────────────────────────────────[...]
 render();
 </script>
 
